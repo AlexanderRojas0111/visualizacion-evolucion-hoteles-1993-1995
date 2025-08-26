@@ -18,21 +18,18 @@ python src/visualizacion_hoteles.py
 
 ```
 Act1/
-├── data/
-│   └── ingresos_hoteles_1993_1995.csv    # Dataset principal
-├── src/
-│   └── visualizacion_hoteles.py          # Script de análisis
-├── outputs/                               # Archivos generados
-├── requirements.txt                       # Dependencias
-└── README.md
+├── data/                                    # Dataset principal
+├── src/                                     # Script de análisis
+├── outputs/                                 # Resultados generados
+├── requirements.txt                         # Dependencias
+└── README.md                               # Este archivo
 ```
 
 ## 🎨 Visualizaciones Generadas
 
-- **Gráfico de Líneas Temporales**: Evolución de ingresos por complejo (1993-1995)
-- **Slopegraph**: Comparación directa 1993 vs 1995 con cambios porcentuales
+- **Gráfico de Líneas Temporales**: Evolución de ingresos por complejo
+- **Slopegraph**: Comparación 1993 vs 1995 con cambios porcentuales
 - **Dashboard Interactivo**: Análisis completo con Plotly (4 subplots)
-- **Métricas Calculadas**: YoY, índices base, cambios totales y resumen ejecutivo
 
 ## 📊 Análisis Incluido
 
@@ -45,13 +42,6 @@ Act1/
 
 - Python ≥ 3.9
 - pip
-
-## 🔧 Solución de Problemas
-
-Si falta alguna librería:
-```bash
-pip install pandas numpy matplotlib seaborn plotly
-```
 
 ---
 

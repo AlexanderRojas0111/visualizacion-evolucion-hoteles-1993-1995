@@ -40,6 +40,16 @@ def verificar_librerias():
 def configurar_entorno():
     """Configura el entorno de visualización"""
     try:
+        # Configurar matplotlib para pantalla
+        plt.rcParams['figure.figsize'] = [10, 6]
+        plt.rcParams['figure.dpi'] = 100
+        plt.rcParams['savefig.dpi'] = 300
+        plt.rcParams['font.size'] = 10
+        plt.rcParams['axes.titlesize'] = 12
+        plt.rcParams['axes.labelsize'] = 10
+        plt.rcParams['xtick.labelsize'] = 9
+        plt.rcParams['ytick.labelsize'] = 9
+        
         # Configurar estilo
         try:
             plt.style.use('seaborn-v0_8')
@@ -47,9 +57,6 @@ def configurar_entorno():
             plt.style.use('default')
         
         sns.set_palette("husl")
-        plt.rcParams['figure.dpi'] = 300
-        plt.rcParams['savefig.dpi'] = 300
-        plt.rcParams['font.size'] = 10
         
         # Crear directorio de outputs si no existe
         os.makedirs('outputs', exist_ok=True)
@@ -103,7 +110,7 @@ def calcular_metricas(df):
 
 def crear_grafico_lineas_temporales(df):
     """Crea gráfico de líneas temporales con matplotlib"""
-    plt.figure(figsize=(12, 8))
+    plt.figure(figsize=(10, 6))
     
     # Paleta colorblind-friendly
     colores = ['#1f77b4', '#ff7f0e', '#2ca02c']
@@ -133,7 +140,7 @@ def crear_grafico_lineas_temporales(df):
     plt.ylabel('Ingresos (USD)', fontsize=12, fontweight='bold')
     
     plt.xticks([1993, 1994, 1995], fontsize=11)
-    plt.ylim(0, df['ingresos_usd'].max() * 1.15)
+    plt.ylim(0, df['ingresos_usd'].max() * 1.1)
     
     plt.grid(True, alpha=0.3, linestyle='--')
     plt.legend(title='Complejo Hotelero', fontsize=11, title_fontsize=12, 
@@ -171,7 +178,7 @@ def crear_slopegraph(df):
     # Ordenar por ingresos de 1993
     orden_complejos = df_1993.sort_values(ascending=False).index
     
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(8, 6))
     
     # Paleta colorblind-friendly
     colores = ['#1f77b4', '#ff7f0e', '#2ca02c']
@@ -353,7 +360,7 @@ def crear_grafico_interactivo(df):
             x=0.5,
             font=dict(size=16, color='black')
         ),
-        height=800,
+        height=600,
         showlegend=True,
         template='plotly_white',
         hovermode='closest'
