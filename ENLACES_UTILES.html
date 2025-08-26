@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔗 Enlaces Útiles - Proyecto Hoteles</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .link-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border-left: 5px solid #ff6b6b;
+        }
+        .link-section h2 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        .link-item {
+            display: block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .link-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .description {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        .github-link {
+            background: linear-gradient(45deg, #333, #666);
+            text-align: center;
+            font-size: 1.1em;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Enlaces Útiles del Proyecto</h1>
+        
+        <div class="link-section">
+            <h2>📊 Visualizaciones Interactivas</h2>
+            <a href="outputs/03_dashboard_interactivo_hoteles.html" class="link-item">
+                🚀 Dashboard Interactivo Completo
+            </a>
+            <div class="description">
+                Análisis completo con 4 subplots: evolución temporal, comparación 1993 vs 1995, 
+                variación interanual y índice base 1993=100
+            </div>
+        </div>
+        
+        <div class="link-section">
+            <h2>🖼️ Visualizaciones Estáticas</h2>
+            <a href="outputs/01_lineas_temporales_ingresos_hoteles.png" class="link-item">
+                📈 Gráfico de Líneas Temporales
+            </a>
+            <a href="outputs/02_slopegraph_1993_vs_1995.png" class="link-item">
+                📊 Slopegraph 1993 vs 1995
+            </a>
+        </div>
+        
+        <div class="link-section">
+            <h2>📁 Datos y Análisis</h2>
+            <a href="outputs/metricas_evolucion_hoteles.csv" class="link-item">
+                📊 Dataset con Métricas Calculadas
+            </a>
+            <a href="outputs/resumen_ejecutivo_hoteles.csv" class="link-item">
+                📋 Resumen Ejecutivo
+            </a>
+        </div>
+        
+        <div class="link-section">
+            <h2>🔧 Archivos del Proyecto</h2>
+            <a href="src/visualizacion_hoteles.py" class="link-item">
+                🐍 Script Principal Python
+            </a>
+            <a href="data/ingresos_hoteles_1993_1995.csv" class="link-item">
+                📄 Dataset Original
+            </a>
+            <a href="requirements.txt" class="link-item">
+                📦 Dependencias del Proyecto
+            </a>
+        </div>
+        
+        <a href="https://github.com/AlexanderRojas0111/visualizacion-evolucion-hoteles-1993-1995" 
+           class="link-item github-link" target="_blank">
+            🌐 Ver en GitHub
+        </a>
+    </div>
+</body>
+</html>
